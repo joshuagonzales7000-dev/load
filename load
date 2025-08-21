@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Six Siege Loader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h2>Loading... Please Wait</h2>
+    </div>
+
+    <div id="menu" class="hidden">
+        <div class="menu-item" id="play">Play</div>
+        <div class="menu-item" id="settings">Settings</div>
+        <div class="menu-item" id="exit">Exit</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
