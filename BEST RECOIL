@@ -1,0 +1,36 @@
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+    let progress = document.querySelector('.progress');
+    let loader = document.getElementById('loader');
+    let menu = document.getElementById('menu');
+    
+    // Simulate the loader progressing
+    let loadProgress = 0;
+    
+    let loadInterval = setInterval(() => {
+        loadProgress += 10;
+        progress.style.width = loadProgress + "%";
+        
+        if (loadProgress === 100) {
+            clearInterval(loadInterval);
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                menu.classList.remove('hidden');
+            }, 500); // Wait a bit before showing the menu
+        }
+    }, 500); // Increment the progress every 500ms
+    
+    // Add functionality for menu items
+    document.getElementById('play').addEventListener('click', () => {
+        alert('Launching Game...');
+    });
+
+    document.getElementById('settings').addEventListener('click', () => {
+        alert('Opening Settings...');
+    });
+
+    document.getElementById('exit').addEventListener('click', () => {
+        alert('Exiting...');
+        window.close(); // Close the window if this is a desktop app
+    });
+});
